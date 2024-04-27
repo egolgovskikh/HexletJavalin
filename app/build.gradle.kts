@@ -23,6 +23,13 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    implementation("io.javalin:javalin:6.1.3")
+    implementation("org.slf4j:slf4j-simple:2.0.7")
+    implementation("io.javalin:javalin-rendering:6.1.3")
+    implementation("gg.jte:jte:3.1.9")
+    testImplementation(platform("org.junit:junit-bom:5.9.1"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -34,7 +41,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.App"
+    mainClass = "org.example.hexlet.HelloWorld"
 }
 
 tasks.named<Test>("test") {
